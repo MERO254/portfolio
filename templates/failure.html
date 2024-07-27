@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Failure</title>
+    <link rel="icon" href="{% static 'images/avg12.png' %}" type="image/png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+        .failure-message {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .failure-message h1 {
+            margin-bottom: 10px;
+            color: #ff0000;
+        }
+        .failure-message p {
+            color: #555;
+        }
+        .failure-message a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .failure-message a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="failure-message">
+        <h1>Something Went Wrong</h1>
+        <p>Sorry, there was an error while sending your message. Please try again later.</p>
+        <p>Error Details: {{ message }}</p>
+        <a href="{% url 'contact' %}">Back to Contact Page</a>
+    </div>
+</body>
+</html>
+

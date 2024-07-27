@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>little spotify</title>
+
+  {% load static %}
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="icon" href="{% static 'images/avg12.png' %}" type="image/png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 20px;
+      color: #333;
+      background-color: #f4f4f9;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .description {
+      max-width: 70%;
+      margin: 20px 0;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      color: #555;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      max-width: 300px;
+      padding: 16px;
+      text-align: center;
+      margin: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+    .carousel-wrapper {
+      width: 80%;
+      margin: 40px auto;
+      position: relative;
+    }
+    .owl-nav button.owl-prev, .owl-nav button.owl-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+    .owl-nav button.owl-prev {
+      left: -50px;
+    }
+    .owl-nav button.owl-next {
+      right: -50px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +254706302881
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : elvisodhiambo255@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'work' %}">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <div class="container">
+    <div class="description">
+      <h1>Foodorder App</h1>
+<p>A food order app is a simple e-commerce application that allows a user to select different products and add them to a cart based on their quantity. The cart page sums up the total amount of the items in the cart and allows the user to order the products after making the payment and specifying the best pickup location. When the payment is complete, the product is added to the order history on the account page</p>
+<h2>Features</h2>
+<p>Food order allows the user to filter products based on two categories; dessert and drinks and it also has a searchview where the user can search for a product based on price and product name.Food order has a signin and register page in which the user has to register or signin to make any order or add any item to the cart</p>
+    </div>
+  </div>
+
+  <!-- Carousel section -->
+  <div class="carousel-wrapper">
+    <div class="owl-carousel owl-theme">
+      <div class="item card">
+        <img src="{% static 'images/splashscreen.png' %}" alt="Splash screen">
+        <p>Splash screen</p>
+      </div>
+      <div class="item card">
+        <img src="{% static 'images/homepage.png' %}" alt="home page">
+        <p>Home page</p>
+      </div>
+      <div class="item card">
+        <img src="{% static 'images/addtocart.png' %}" alt="addtocart">
+        <p>Add to cart page</p>
+      </div>
+      <div class="item card">
+        <img src="{% static 'images/addtocart1.png' %}" alt="Cart page">
+        <p>Cart page</p>
+      </div> 
+      <div class="item card">
+        <img src="{% static 'images/mpesapayment.png' %}" alt="mpesa payment page">
+        <p>payment page</p>
+      </div>   
+      <div class="item card">
+        <img src="{% static 'images/acountpage.png' %}" alt="Account page">
+        <p>Account page</p>
+      </div>
+      <div class="item card">
+        <img src="{% static 'images/registrationorder.png' %}" alt="Registration page">
+        <p>Registration page</p>
+      </div>  
+      <div class="item card">
+        <img src="{% static 'images/signin.png' %}" alt="signinpage">
+        <p>Signin page</p>
+      </div>  
+    </div>
+  </div>
+
+  <div class="reference">
+    <h2>Reference:</h2>
+      <a href="https://github.com/MERO254/simplefoodorder.git">https://github.com/MERO254/simplefoodorder.git</a>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/I7NWVHszceE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div>
+  
+{# little spotify#}
+  <div class="container">
+    <div class="description">
+      <h1>Little Spotify App</h1>
+<p>Little Spotify is a simple entertainment app that allows you to play music and listen to different podcasts.</p>
+<h2>Features</h2>
+<p>Little Spotify has a scroll view that shows different podcasts and a list of various types of songs. On the song list you can click on the music icon to show a popup menu for sharing or downloading the music</p>
+    </div>
+  </div>
+
+  <!-- Carousel section -->
+  <div class="carousel-wrapper">
+    <div class="owl-carousel owl-theme">
+      <div class="item card">
+        <img src="{% static 'images/littlesp1.png' %}" alt="Login and Registration">
+        <p>Little spotify home page</p>
+      </div>
+      <div class="item card">
+        <img src="{% static 'images/littlespot2.png' %}" alt="Doctors Page">
+        <p>Playing a podcast</p>
+      </div>
+      <div class="item card">
+        <img src="{% static 'images/littlespot3.png' %}" alt="Booking Appointments">
+        <p>Playing a song</p>
+      </div>
+      <div class="item card">
+        <img src="{% static 'images/littlespot4.png' %}" alt="Appointments Page">
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reference">
+    <h2>Reference:</h2>
+            <a href="https://github.com/MERO254/littlespotify">https://github.com/MERO254/littlespotify</a>
+
+      <div class="reference">
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/U7_L4Pnp2iE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+      </div>
+
+  </div>
+
+  <!-- Add Other Projects Button -->
+{#   <div class="container text-center my-4">#}
+{#        <iframe width="640" height="360" src="https://www.youtube.com/watch?v=U7_L4Pnp2iE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>#}
+{#       <button class="btn btn-primary" onclick="window.location.href='{% url 'otherproject' %}'" style="margin-top: 10px">Other Projects</button>#}
+{#  </div>#}
+
+  <!-- footer section -->
+  <footer class="footer_section">
+  </footer>
+  <!-- footer section -->
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+  <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        navText: ['<button class="owl-prev">Prev</button>', '<button class="owl-next">Next</button>'],
+        responsive:{
+          0:{
+            items:1
+          },
+          600:{
+            items:2
+          },
+          1000:{
+            items:3
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
